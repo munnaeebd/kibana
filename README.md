@@ -17,7 +17,7 @@ PUT .kibana/_settings
 }
 
 
-
+# elastic and kibana deployment
 1: Create Name Space
 kubectl create -f logging.yaml
 
