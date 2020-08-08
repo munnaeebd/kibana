@@ -28,14 +28,14 @@ kubectl create -f logging.yaml
 3: kubectl create -f elasticsearch_statefulset.yaml
 
 optional: 
-kubectl port-forward es-cluster-0 9200:9200 --namespace=kube-logging
+kubectl port-forward es-cluster-0 9200:9200 --namespace=logging
 curl http://localhost:9200/_cluster/state?pretty
 
 4: kubectl create -f kibana.yaml
 
 5: access dashboard from localhost:
 
-kubectl port-forward kibana-6c9fb4b5b7-plbg2 5601:5601 --namespace=kube-logging
+kubectl port-forward kibana-6c9fb4b5b7-plbg2 5601:5601 --namespace=logging
 
 http://localhost:5601
 ~~~
