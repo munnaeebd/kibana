@@ -1,7 +1,7 @@
 # kibana
 
-Issue: Create Index patterns forbidden error. 
-
+## Issue: Create Index patterns forbidden error. 
+~~~
 If your storage is low kibana auto changes its config to read-only mode. to deal with it, go to your dev tools console and
 run below command:
 
@@ -15,6 +15,15 @@ PUT .kibana/_settings
 }
 }
 }
+~~~
+## Issue: kibana pod starting problem
+~~~
+delete fluent-bit pod
+kubectl port-forward es-cluster-0 9200:9200 --namespace=logging &
+curl -X DELETE "localhost:9200/*"
+delete and create kibana pod
+create fluent-bit pod
+~~~
 
 
 # elastic and kibana deployment
