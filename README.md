@@ -53,6 +53,14 @@ http://localhost:5601
 ~~~
 6: kubectl create -f fluentd.yaml
 ~~~
+## or 
+
+# Fluent-bit Setup:
+
+~~~
+kubectl create -f https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/output/elasticsearch/fluent-bit-ds.yaml
+or 
+kubectl create -f fluent-bit.yaml
 
 
 ## Create Index patterns
