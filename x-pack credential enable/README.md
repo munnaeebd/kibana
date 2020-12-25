@@ -74,7 +74,20 @@ vi kibana.yaml
         configMap:
           name: kibana-config
 ~~~
+~~~
+Login to kibana with elastic superuser --> Stack Management->Users
 
+Add fluentbit user
+Add fluentbit role with appropriate indicas and add this role to fluentbit user
+
+~~~
+## Update fluent-bit config with credential
+
+[OUTPUT]
+    Name  es
+
+    HTTP_User fluentbit
+    HTTP_Passwd fluentbit
 
 
 
