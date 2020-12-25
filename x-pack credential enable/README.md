@@ -57,6 +57,13 @@ vi elastic-sf.yaml
 
 ~~~
 
+## Generate Password
+
+~~~
+kubectl -n logging exec -it  es-cluster-0 bash
+elasticsearch-setup-passwords auto
+
+~~~
 
 ## Set credential for kibana
 ~~~
